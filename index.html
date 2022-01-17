@@ -7,21 +7,23 @@
   <link rel="stylesheet" href="./assets/css/style.css">
   <title>Document</title>
 </head>
-<body>
+<body class="body">
   <article class="main">
     <h1 class="header">Register</h1>
-    <p>Create your account.its free and only takes a minute</p>
-    <form  action="">
-      <fieldset class="form" >
-        <input type="text" name="First Name"  placeholder="First Name">
-        <input type="text" name="Last Name"  placeholder="Last Name">
-        <input type="email" name="Email"  placeholder="Email">
-        <input type="password" name="password"  placeholder="Password">
-        <input type="password" name="Confirm Password"  placeholder="Confirm Password">
-        <input type="checkbox" name="" id="#1">
-        <label id="#1" for="">i accept</label>
-      </fieldset>
-    </form>
+    <p class="top-text">Create your account.its free and only takes a minute</p>
+    <form class="form" action=>
+      <fieldset class="container-name" >
+        <input class="style style-input" type="text" name="First Name"  placeholder="First Name" autofocus required pattern="^[a-z0-9_-]{3,15}$" >
+        <input class="style style-input" type="text" name="Last Name"  placeholder="Last Name" required pattern="^[a-z0-9_-]{3,15}$">
+        </fieldset>
+        <input class="style-input" type="email" name="Email"  placeholder="Email" required pattern="[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+">
+        <input class="style-input" type="password" name="password"  placeholder="Password" required pattern="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{8,}$">
+        <input class="style-input" type="password" name="Confirm Password"  placeholder="Confirm Password" required pattern="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{8,}$"> 
+        <label class="label" for="">
+            <input class="checkbox " type="checkbox" name="" required> I accept the <a class="link" href="#">Terms of Use</a> & <a class="link" href="#">Privacy Policy</a> .
+          </label>
+          <button class="button" type="submit">Register Now</button>
+         </form>
   </article>
 </body>
 </html>
